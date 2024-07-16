@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <link rel="stylesheet" href="style.css">
+        <img class="logo" src="media\website_logo.png" alt="Queen's Engineering Competition" style="width: 140px;height: 120px;">
+        <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+            <div class="wrapper">
+               <ul>
+                  <li><a href="home.html">About</a></li>
+                  <li><a href="#">FAQ's</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="#">Meet our sponsors</a></li>
+                  <li><a href="#">Previous Competitors</a></li>
+                  <li><a href="#">Beyond the finish line</a></li>
+               </ul>
+            </div>
+        <div class="contact-style">
+            <h2>Contact Us</h2>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="First Name">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email-contact" placeholder="Email ID">
+
+            <label for="subject">Message</label>
+            <textarea type="text" id="subject" name="subject-user" placeholder="Message"></textarea>
+
+            <button class="button" id="submit" name="submit-button" onclick="sendMessage()">Submit</button>
+        
+            
+            
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+    document.getElementById("fname").innerHTML= "Hello";
+    function sendMessage(){
+        document.getElementById("submit").innerHTML = "Message Sent!";
+    }
+    
+
+
+</script>
+

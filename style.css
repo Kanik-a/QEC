@@ -49,22 +49,24 @@ body {
     justify-content: center;
     padding-left: 50px; /* Add padding for better positioning */
 }
-.homeHero__title {
-    
-    font-size: 6rem;
-    line-height: 7rem;
-    text-align: left; /* Align text to the left */
+
+   .homeHero__title {
+    font-size: 2.5rem; /* Responsive font size */
+    line-height: 3rem; /* Responsive line height */
+    text-align: left;
     color: transparent;
     -webkit-text-stroke: 2px #6643b5;
     -webkit-text-fill-color: white;
-    width: 50%; /* Set width to 50% */
-    margin: 0; /* Remove auto centering */
-    font-family: 'Arial', sans-serif; /* Use the New Astro font */
+    width: 100%; /* Full width */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
     z-index: 1;
 }
+
 .homeHero__title div {
-    transition: 1.5s opacity ease .5s,1.5s transform ease .5s,.5s color ease,.5s -webkit-text-stroke ease,1.5s -webkit-transform ease .5s,1.5s -moz-transform ease .5s,1.5s -o-transform ease .5s;
+    transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;
 }
+
 .homeHero__title div:hover {
     color: white;
     -webkit-text-stroke: 2px #6643b5;

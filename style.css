@@ -144,6 +144,8 @@ body {
 /* End*/
 
 
+
+ 
 /* Container for social media links and sign-up button */
 .social-media-container {
     display: flex;
@@ -162,6 +164,7 @@ body {
     text-decoration: none; /* Remove underline from links */
 }
 
+/* Social media icons and sign-up button styling */
 .insta, .linkedin, .engineering {
     color: #6643b5;
     font-size: 40px; /* Adjust font size for icons */
@@ -197,9 +200,8 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .social-media-container {
-        flex-direction: column; /* Stack items vertically on smaller screens */
+        flex-wrap: wrap; /* Allow wrapping to handle smaller screens */
         gap: 10px; /* Reduce space between items */
-        right: 10px; /* Ensure container is still aligned to the right */
     }
     
     .insta, .linkedin, .engineering, .sign-up {
@@ -209,15 +211,15 @@ body {
 
 @media (max-width: 480px) {
     .social-media-container {
-        flex-direction: column; /* Stack items vertically */
+        flex-wrap: wrap; /* Allow wrapping to handle very small screens */
         gap: 5px; /* Further reduce space between items */
-        right: 10px; /* Ensure container is still aligned to the right */
     }
     
     .insta, .linkedin, .engineering, .sign-up {
         font-size: 25px; /* Further reduce icons and text size */
     }
 }
+
 
 
 

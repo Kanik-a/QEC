@@ -143,45 +143,79 @@ body {
 }
 /* End*/
 
-/* Global Styles for Social Media Links */
-.social-media {
-    position: absolute;
+
+
+/* Container for social media links and sign-up button */
+.social-media-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-end; /* Align items to the right */
+    position: fixed; /* Fixed position for sticky effect */
+    top: 10px;
+    right: 10px;
+    gap: 20px; /* Space between items */
+    z-index: 9999; /* High z-index to stay on top */
+}
+
+.social-media-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.insta, .linkedin, .engineering {
     color: #6643b5;
-    font-size: 2rem; /* Responsive font size */
-    line-height: 2.5rem; /* Adjusted for better alignment */
-    height: 2.5rem; /* Adjusted for consistency */
-    width: 2.5rem; /* Adjusted for consistency */
+    font-size: 40px; /* Adjust font size for icons */
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 
-.linkedin {
-    top: 1rem;
-    right: 2rem;
+.insta ion-icon, .linkedin ion-icon {
+    font-size: 100%; /* Ensure icons scale properly */
 }
 
-.insta {
-    top: 1rem;
-    right: 6rem;
-}
-
-.engineering {
-    top: 1rem;
-    right: 10rem;
+.engineering img {
+    height: 35px;
+    width: 35px;
 }
 
 .sign-up {
-    position: absolute;
-    top: 1.5rem;
-    right: 14rem;
     background-color: #6643b5;
     color: white;
-    padding: 0.5rem 1.25rem;
+    padding: 7px 20px;
     text-align: center;
+    font-size: 16px;
+    margin: 0;
+    border-radius: 10px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 1rem; /* Responsive font size */
-    cursor: pointer;
-    border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-media-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px; /* Reduce space between items */
+    }
+    
+    .inbox, .linkedin, .engineering, .sign-up {
+        font-size: 30px; /* Smaller icons and text on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 5px; /* Further reduce space between items */
+    }
+    
+    .inbox, .linkedin, .engineering, .sign-up {
+        font-size: 25px; /* Further reduce icons and text size */
+    }
 }
 
 /* Overlay Menu */

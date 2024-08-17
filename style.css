@@ -2,203 +2,220 @@
 /*CSS*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     overflow-x: hidden;
     height: 100vh;
-    width: 100vw;
-    background-size: 100%;
+    width: 100%;
+    background-size: cover; /* Adjusted to cover the background */
     background-repeat: no-repeat;
-    margin: 0px;
     color: #fff;
     font-size: 1.6rem;
     line-height: 2.2rem;
-    font-family: 'Poppins',sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-.logo{
+
+/* Logo Styling */
+.logo {
     position: absolute;
-    top: 5px;
-    left: 5px;
-
+    top: 1rem; /* Adjusted for better spacing */
+    left: 1rem; /* Adjusted for better spacing */
+    z-index: 10;
 }
 
-/* Image/Word Animation*/
+/* Home Hero Section */
 .homeHero {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
-    padding-top: 0;
-    margin-top: 75px;
+    padding-top: 1rem; /* Adjusted for mobile view */
+    margin-top: 1rem; /* Adjusted for mobile view */
 }
+
 .homeHero--inner {
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 50px;
+    padding: 2rem; /* Adjusted for better spacing */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left) */
+    align-items: flex-start;
     justify-content: center;
-    padding-left: 50px; /* Add padding for better positioning */
 }
+
 .homeHero__title {
-    
-    font-size: 6rem;
-    line-height: 7rem;
-    text-align: left; /* Align text to the left */
+    font-size: 4rem; /* Responsive font size */
+    line-height: 5rem; /* Responsive line height */
+    text-align: left;
     color: transparent;
     -webkit-text-stroke: 2px #6643b5;
     -webkit-text-fill-color: white;
-    width: 50%; /* Set width to 50% */
-    margin: 0; /* Remove auto centering */
-    font-family: 'Arial', sans-serif; /* Use the New Astro font */
+    width: 100%; /* Full width on small screens */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
     z-index: 1;
 }
+
 .homeHero__title div {
-    transition: 1.5s opacity ease .5s,1.5s transform ease .5s,.5s color ease,.5s -webkit-text-stroke ease,1.5s -webkit-transform ease .5s,1.5s -moz-transform ease .5s,1.5s -o-transform ease .5s;
+    transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;
 }
+
 .homeHero__title div:hover {
     color: white;
     -webkit-text-stroke: 2px #6643b5;
 }
+
+/* Clips Styling */
 .homeHero__clips {
-	width: 200px;
-	height: 200px;
-	margin-bottom: 35px;
-	object-fit: cover;
-	display: block;
-	-webkit-clip-path: circle(50%);
-	clip-path: circle(50%);
-	z-index: 10;
-	mix-blend-mode: exclusion;
+    width: 100%;
+    height: auto; /* Responsive height */
+    max-height: 200px; /* Max height for clips */
+    margin-bottom: 2rem; /* Adjusted for mobile view */
+    object-fit: cover;
+    display: block;
+    -webkit-clip-path: circle(50%);
+    clip-path: circle(50%);
+    z-index: 10;
+    mix-blend-mode: exclusion;
 }
 
+/* Custom Cursor */
 .cb-cursor {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999999999999;
-    contain: layout style size;
+    z-index: 9999; /* Adjusted z-index */
     pointer-events: none;
     will-change: transform;
-    transition: opacity 1s,color .4s;
+    transition: opacity 1s, color 0.4s;
 }
+
 .cb-cursor-text {
     position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 36px;
-    height: 36px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Responsive height */
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 1;
     color: white;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.6rem;
     line-height: 1.7rem;
     text-align: center;
     letter-spacing: -.01em;
-    transition: opacity 1s,transform .3s,-webkit-transform .3s,-moz-transform .3s,-o-transform .3s;
+    transition: opacity 1s, transform 0.3s;
 }
-.cb-cursor.-video{
-    z-index: 9;
+
+.cb-cursor.-video {
+    z-index: 9998; /* Adjusted z-index */
     mix-blend-mode: exclusion;
 }
 
 .cb-cursor-video {
     transform: scale(0);
     opacity: 1;
-    transition: opacity 1s,-webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out,opacity 1s;
-    transition: transform .3s ease-in-out,opacity 1s,-webkit-transform .3s ease-in-out,-moz-transform .3s ease-in-out,-o-transform .3s ease-in-out;
+    transition: opacity 1s, transform 0.3s ease-in-out;
 }
-.cb-cursor.-video .cb-cursor-video{
+
+.cb-cursor.-video .cb-cursor-video {
     opacity: 1;
     transform: scale(1);
 }
+
 .cb-cursor #reel-clips {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: auto; /* Responsive height */
+    max-height: 350px; /* Max height for clips */
     position: absolute;
-    top: -175px;
-    left: -175px;
+    top: -50%; /* Centered vertically */
+    left: -50%; /* Centered horizontally */
     -o-object-fit: cover;
     object-fit: cover;
     display: block;
     -webkit-clip-path: circle(28%);
     clip-path: circle(28%);
 }
-/* End*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .homeHero__title {
+        font-size: 3rem; /* Smaller font size for mobile */
+        line-height: 4rem; /* Adjusted line height */
+    }
+
+    .homeHero__clips {
+        max-height: 150px; /* Smaller max height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .homeHero__title {
+        font-size: 2rem; /* Further smaller font size for very small screens */
+        line-height: 3rem; /* Adjusted line height */
+    }
+
+    .homeHero__clips {
+        max-height: 100px; /* Further smaller max height for very small screens */
+    }
+}
 
 
-
-
-/*Social Media links*/
-.linkedin {
+/* Global Styles for Social Media Links */
+.social-media {
     position: absolute;
     color: #6643b5;
-    font-size: 80px;
-    --ionicon-stroke-width: 32px;
-    top: 10px;
-    right: 90px;
-    height: 40px;
-    width: 40px;
-    line-height: 50px;
-    border-radius: 100%;
+    font-size: 2rem; /* Responsive font size */
+    line-height: 2.5rem; /* Adjusted for better alignment */
+    height: 2.5rem; /* Adjusted for consistency */
+    width: 2.5rem; /* Adjusted for consistency */
+    border-radius: 50%;
 }
+
+.linkedin {
+    top: 1rem;
+    right: 2rem;
+}
+
 .insta {
-    position:absolute;
-    color:#6643b5 ;
-    font-size: 80px;
-    --ionicon-stroke-width: 32px;
-    top: 10px;
-    height: 40px;
-    width: 40px;
-    line-height: 50px;
-    right: 150px;
-    border-radius: 50%;
+    top: 1rem;
+    right: 6rem;
 }
+
 .engineering {
-    position: absolute;
-    font-size: 80px;
-    top: 10px;
-    right: 220px;
-    --ionicon-stroke-width: 32px;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    line-height: 50px;
+    top: 1rem;
+    right: 10rem;
 }
-.sign-up{
+
+.sign-up {
     position: absolute;
-    top: 15px;
-    right: 280px;
+    top: 1.5rem;
+    right: 14rem;
     background-color: #6643b5;
     color: white;
-    padding: 7px 20px;
+    padding: 0.5rem 1.25rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 1rem; /* Responsive font size */
     cursor: pointer;
-    border-radius: 10px;
-  
+    border-radius: 0.625rem;
 }
-/*End*/
 
-/*Overlay Menu*/
+/* Overlay Menu */
 .wrapper {
-    position: absolute;
+    position: fixed; /* Fixed to cover entire viewport */
     top: 0;
     left: 0;
     height: 100%;
@@ -214,20 +231,20 @@ body {
 }
 
 .menu-btn {
-    position: absolute;
-    z-index: 101;
-    right: 20px;
-    top: 20px;
-    height: 50px;
-    width: 50px;
+    position: fixed; /* Fixed to stay in view */
+    right: 1rem;
+    top: 1rem;
+    height: 3rem;
+    width: 3rem;
     text-align: center;
-    line-height: 50px;
+    line-height: 3rem;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 1.25rem; /* Responsive font size */
     color: #fff;
     cursor: pointer;
     background: linear-gradient(-135deg, #6643b5);
     transition: all 0.3s ease-in-out;
+    z-index: 101; /* Ensure it appears above the wrapper */
 }
 
 #active:checked ~ .menu-btn {
@@ -236,7 +253,7 @@ body {
 }
 
 #active:checked ~ .menu-btn i:before {
-    content: "\f00d";
+    content: "\f00d"; /* Icon change */
 }
 
 .wrapper ul {
@@ -249,18 +266,17 @@ body {
 }
 
 .wrapper ul li {
-    margin: 15px 0;
+    margin: 1rem 0; /* Responsive margin */
 }
 
 .wrapper ul li a {
-    color: none;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 500;
-    padding: 5px 30px;
     color: #fff;
+    text-decoration: none;
+    font-size: 1.875rem; /* Responsive font size */
+    font-weight: 500;
+    padding: 0.3125rem 1.875rem;
     position: relative;
-    line-height: 50px;
+    line-height: 2.5rem; /* Consistent line height */
     transition: all 0.3s ease;
 }
 
@@ -269,7 +285,7 @@ body {
     content: "";
     background: #fff;
     width: 100%;
-    height: 50px;
+    height: 2.5rem;
     left: 0;
     border-radius: 50px;
     transform: scaleY(0);
@@ -289,36 +305,106 @@ input[type="checkbox"] {
     display: none;
 }
 
-/*About Section*/
+/* About Section */
 .about {
-    padding: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    left: 200px;
+    padding: 2rem;
+    margin: 0 2rem;
     background: #6643b5;
     color: white;
     text-align: center;
-    font-size: 2rem;
-    line-height: 3rem;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 25px;
- 
+    font-size: 1.5rem; /* Responsive font size */
+    line-height: 2.5rem;
+    border-radius: 1.5625rem;
 }
 
 .about h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Responsive font size */
+    margin-bottom: 1rem;
 }
-.about p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-/*End*/
 
-/*Challenge Flip Cards*/
-/* Container for flip cards */
+.about p {
+    max-width: 90%; /* Responsive max-width */
+    margin: 0 auto;
+    font-size: 1.125rem; /* Responsive font size */
+    line-height: 1.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-media {
+        font-size: 1.5rem; /* Smaller icons for tablets */
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .sign-up {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        right: 10rem; /* Adjusted for smaller screens */
+    }
+
+    .menu-btn {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .wrapper ul li a {
+        font-size: 1.5rem; /* Smaller text for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media {
+        font-size: 1.25rem; /* Smaller icons for mobile */
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+
+    .sign-up {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        right: 6rem; /* Adjusted for smaller screens */
+    }
+
+    .menu-btn {
+        height: 2rem;
+        width: 2rem;
+        font-size: 0.875rem;
+    }
+
+    .wrapper ul li a {
+        font-size: 1.25rem; /* Smaller text for mobile */
+    }
+
+    .about {
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flip Card Styles */
 .flip-card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -329,16 +415,15 @@ input[type="checkbox"] {
     max-width: 1200px;
 }
 
-/* Individual flip cards */
 .flip-card {
     position: relative;
     background-color: transparent;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 300px;
     perspective: 1000px;
-    border-radius: 50px;
+    border-radius: 25px; /* Reduced to avoid excessive rounding */
     overflow: hidden;
-    margin: 10px;
 }
 
 .flip-card-inner {
@@ -348,10 +433,9 @@ input[type="checkbox"] {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 50px;
-    font-size: 0.7rem;
-    line-height: 1.5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 25px; /* Consistent border radius */
+    font-size: 0.875rem; /* Adjusted for better readability */
 }
 
 .flip-card-front, .flip-card-back {
@@ -365,8 +449,7 @@ input[type="checkbox"] {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    transition: transform 0.6s;
-    border-radius: 50px;
+    border-radius: 25px;
 }
 
 .flip-card-front {
@@ -382,16 +465,16 @@ input[type="checkbox"] {
 
 .flip-card-heading {
     position: absolute;
-    top: 100px;
-    left: 20px;
-    right: 20px;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
     text-align: center;
     z-index: 1;
 }
 
 .flip-card-heading h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.25rem; /* Adjusted for readability */
     color: white;
     background-color: #6643b5;
     padding: 10px 20px;
@@ -402,231 +485,202 @@ input[type="checkbox"] {
     transform: rotateY(180deg);
 }
 
-/* Footer style */
+/* Footer Styles */
 .footer {
-    padding: 20px;
+    padding: 1rem;
     width: 100%;
     background-color: #6643b5;
-    font-size: medium;
+    color: white;
+    font-size: 1rem;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 2rem;
 }
 
-/*Contact Us form*/
-
-input[type=text], input[type=email], select, textarea{
-    width: 60%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+/* Contact Us Form Styles */
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    max-width: 600px; /* Ensure form fields don't stretch too much */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 0.875rem;
 }
 
 .button {
     background-color: white;
     color: #6643b5;
-    padding: 15px 30px;
+    padding: 12px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
+    font-size: 1rem;
+}
+
 .button:hover {
     background-color: #45a049;
-  }
-  
-  /* Add a background color and some padding around the form */
-  
+}
 
-  .contact-style {
-    padding: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 150px;
-    left: 200px;
+/* Contact Section Styles */
+.contact-style {
+    padding: 2rem;
+    margin: 0 auto;
     background: #6643b5;
     color: white;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     border-radius: 25px;
     text-align: left;
+    max-width: 800px; /* Centered and limited width */
 }
 
-input[type=text], input[type=email], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-    font-size: small;
-    
-}
-
-input[type=submit]{
-    background-color: white;
-    color: #6643b5;
-    padding: 12px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.topic{
-    padding: 40px;
+.topic {
+    padding: 1rem;
     background-color: #6643b5;
     color: white;
-    font-size: 30px;
+    font-size: 1.875rem;
     border-radius: 25px;
-    width: 50%;
-    margin-top: 30px;
-    margin-left: 290px;
-    text-align: center; 
-    font-weight: bold; 
+    width: 80%; /* Adjusted for better responsiveness */
+    margin: 2rem auto;
+    text-align: center;
+    font-weight: bold;
 }
+
 .faq-container {
-   
-    margin-top: 70px; 
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 4rem;
 }
 
-/* Style the collapsible buttons */
+/* Collapsible Section Styles */
 .collapsible {
     color: white;
     cursor: pointer;
     padding: 18px;
-    width: 70%;
+    width: 90%; /* Adjusted for better responsiveness */
     border: none;
     text-align: left;
     outline: none;
-    font-size: 16px;
-    margin-bottom: 5px; /* Space between buttons */
+    font-size: 1rem;
+    margin-bottom: 5px;
     border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: #6643b5;
     margin-top: 15px;
 }
 
-/* Style the collapsible content */
 .content {
     padding: 18px;
-    display: none; /* Hidden by default */
+    display: none;
     overflow: hidden;
     background-color: #6643b5;
-    color: white; 
-    border-radius: 25px; 
-    width: 70%;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition */
-    max-height: 0; /* Collapse by default */
-    margin-bottom: 15px; /* Space between content sections */
-    font-size: 16px;
+    color: white;
+    border-radius: 25px;
+    width: 90%; /* Adjusted for better responsiveness */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
 
-/* Display the content when active */
 .content.show {
     display: block;
-    max-height: 1000px; /* Adjust based on the expected content height */
+    max-height: 1000px;
 }
 
 .active, .collapsible:hover {
     background-color: #6643b5;
 }
 
-* {box-sizing: border-box}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
+/* Slideshow Styles */
 .slideshow-container {
-  max-width: 700px;
-  position: absolute;
-  margin-top: 70px;
-  margin-left: 250px;
-  max-height: 400px;
-  
+    max-width: 700px;
+    margin: 70px auto 0 auto;
+    max-height: 400px;
+    position: relative;
 }
 
-/* Next & previous buttons */
+/* Navigation Buttons for Slideshow */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.prizes{
-    background-color: #6643b5;
-    color: white;
-    padding: 20px;
+    cursor: pointer;
     position: absolute;
-    margin-top: 550px;
-    margin-right: 20px;
-    margin-left: 20px;
-    border-radius: 25px;
-    font-size: medium;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-.work-with-us-container{
-    padding: 10px;
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Prizes Section Styles */
+.prizes {
     background-color: #6643b5;
     color: white;
-    font-size: 30px;
+    padding: 20px;
+    margin: 50px 20px;
     border-radius: 25px;
-    font-weight: bold; 
-    margin-top: 250px;
-    margin-left: 150px;
-    width: 75%;
+    font-size: 1rem;
 }
-.work-with-us{
+
+/* Work With Us Section Styles */
+.work-with-us-container {
+    padding: 20px;
+    background-color: #6643b5;
+    color: white;
+    font-size: 1.875rem;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 3rem;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work-with-us {
     background-color: #6643b5;
     color: white;
     padding: 20px;
 }
-.work-with-us h4{
+
+.work-with-us h4 {
     text-align: center;
     padding: 10px;
 }
+
 .work-with-us p {
-    font-size: medium;
+    font-size: 1rem;
     padding: 10px;
 }
-.work-with-us a{
-    font-size: medium;
+
+.work-with-us a {
+    font-size: 1rem;
     color: #6643b5;
 }
-.email-box{
+
+/* Email Box Styles */
+.email-box {
     background-color: white;
     border-radius: 25px;
-    width: 35%;
-   padding: 3px;
+    width: 60%; /* Adjusted for better responsiveness */
+    padding: 10px;
     text-align: center;
-    margin-left: 250px;
+    margin: 20px auto; /* Centered and adjusted margins */
 }
-

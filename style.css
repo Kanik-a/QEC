@@ -144,16 +144,14 @@ body {
 /* End*/
 
 
-
 /* Container for social media links and sign-up button */
 .social-media-container {
     display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
     position: fixed; /* Fixed position for sticky effect */
     top: 10px;
     right: 10px;
-    gap: 20px; /* Space between items */
+    gap: 15px; /* Space between items */
     z-index: 9999; /* High z-index to stay on top */
 }
 
@@ -170,6 +168,7 @@ body {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    transition: color 0.3s ease;
 }
 
 .insta ion-icon, .linkedin ion-icon {
@@ -181,13 +180,13 @@ body {
     width: 35px;
 }
 
+/* Styling for sign-up button */
 .sign-up {
     background-color: #6643b5;
     color: white;
     padding: 7px 20px;
     text-align: center;
     font-size: 16px;
-    margin: 0;
     border-radius: 10px;
     text-decoration: none;
     display: flex;
@@ -200,9 +199,10 @@ body {
     .social-media-container {
         flex-direction: column; /* Stack items vertically on smaller screens */
         gap: 10px; /* Reduce space between items */
+        right: 10px; /* Ensure container is still aligned to the right */
     }
     
-    .inbox, .linkedin, .engineering, .sign-up {
+    .insta, .linkedin, .engineering, .sign-up {
         font-size: 30px; /* Smaller icons and text on smaller screens */
     }
 }
@@ -211,12 +211,15 @@ body {
     .social-media-container {
         flex-direction: column; /* Stack items vertically */
         gap: 5px; /* Further reduce space between items */
+        right: 10px; /* Ensure container is still aligned to the right */
     }
     
-    .inbox, .linkedin, .engineering, .sign-up {
+    .insta, .linkedin, .engineering, .sign-up {
         font-size: 25px; /* Further reduce icons and text size */
     }
 }
+
+
 
 /* Overlay Menu */
 .wrapper {

@@ -143,25 +143,15 @@ body {
 }
 /* End*/
 
-
-
- 
-/* Container for social media links and sign-up button */
-.social-media-container {
+/* Container for social media links, sign-up button, and menu button */
+.header-links {
     display: flex;
     align-items: center; /* Center items vertically */
-    position: fixed; /* Fixed position for sticky effect */
+    position: fixed; /* Fixed position to stay at the top */
     top: 10px;
     right: 10px;
     gap: 15px; /* Space between items */
-    z-index: 9999; /* High z-index to stay on top */
-}
-
-.social-media-container a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none; /* Remove underline from links */
+    z-index: 1000; /* Ensure it appears above other content */
 }
 
 /* Social media icons and sign-up button styling */
@@ -171,6 +161,9 @@ body {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: color 0.3s ease;
 }
 
@@ -197,32 +190,6 @@ body {
     justify-content: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .social-media-container {
-        flex-wrap: wrap; /* Allow wrapping to handle smaller screens */
-        gap: 10px; /* Reduce space between items */
-    }
-    
-    .insta, .linkedin, .engineering, .sign-up {
-        font-size: 30px; /* Smaller icons and text on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .social-media-container {
-        flex-wrap: wrap; /* Allow wrapping to handle very small screens */
-        gap: 5px; /* Further reduce space between items */
-    }
-    
-    .insta, .linkedin, .engineering, .sign-up {
-        font-size: 25px; /* Further reduce icons and text size */
-    }
-}
-
-
-
-
 /* Overlay Menu */
 .wrapper {
     position: fixed; /* Fixed to cover entire viewport */
@@ -241,78 +208,30 @@ body {
 }
 
 .menu-btn {
-    position: fixed; /* Fixed to stay in view */
-    right: 1rem;
-    top: 1rem;
-    height: 3rem;
-    width: 3rem;
-    text-align: center;
-    line-height: 3rem;
-    border-radius: 50%;
-    font-size: 1.25rem; /* Responsive font size */
-    color: #fff;
-    cursor: pointer;
-    background: linear-gradient(-135deg, #6643b5);
-    transition: all 0.3s ease-in-out;
-    z-index: 101; /* Ensure it appears above the wrapper */
+    display: none; /* Hide menu button in this container */
 }
 
-#active:checked ~ .menu-btn {
-    background: #fff;
-    color: #ffe79a;
+/* Media query to adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .header-links {
+        flex-wrap: wrap; /* Allow items to wrap on small screens */
+        gap: 10px; /* Reduce space between items */
+    }
+    
+    .insta, .linkedin, .engineering, .sign-up {
+        font-size: 30px; /* Smaller icons and text on smaller screens */
+    }
 }
 
-#active:checked ~ .menu-btn i:before {
-    content: "\f00d"; /* Icon change */
-}
-
-.wrapper ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-}
-
-.wrapper ul li {
-    margin: 1rem 0; /* Responsive margin */
-}
-
-.wrapper ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.875rem; /* Responsive font size */
-    font-weight: 500;
-    padding: 0.3125rem 1.875rem;
-    position: relative;
-    line-height: 2.5rem; /* Consistent line height */
-    transition: all 0.3s ease;
-}
-
-.wrapper ul li a:after {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 100%;
-    height: 2.5rem;
-    left: 0;
-    border-radius: 50px;
-    transform: scaleY(0);
-    z-index: -1;
-    transition: transform 0.3s ease;
-}
-
-.wrapper ul li a:hover:after {
-    transform: scaleY(1);
-}
-
-.wrapper ul li a:hover {
-    color: #6643b5;
-}
-
-input[type="checkbox"] {
-    display: none;
+@media (max-width: 480px) {
+    .header-links {
+        flex-wrap: wrap; /* Allow more wrapping on very small screens */
+        gap: 5px; /* Further reduce space between items */
+    }
+    
+    .insta, .linkedin, .engineering, .sign-up {
+        font-size: 25px; /* Further reduce icons and text size */
+    }
 }
 
 /* About Section */

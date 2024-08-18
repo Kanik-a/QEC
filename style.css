@@ -150,7 +150,7 @@ body {
     align-items: center; /* Center items vertically */
     position: absolute; /* Fixed position to stay at the top */
     top: 20px;
-    right: 100px;
+    right: 90px;
     gap: 15px; /* Space between items */
     justify-content: center;
 	
@@ -297,7 +297,7 @@ input[type="checkbox"] {
     }
     
     .insta, .linkedin, .engineering, .sign-up {
-        font-size: 30px; /* Smaller icons and text on smaller screens */
+        font-size: 10px; /* Smaller icons and text on smaller screens */
     }
 }
 

@@ -81,7 +81,7 @@ body {
     -webkit-text-stroke: 2px #6643b5;
     -webkit-text-fill-color: white;
     width: 100%; /* Full width */
-    margin-left: 20px;
+    margin-left: 10px;
     font-family: 'Arial', sans-serif;
     z-index: 1;
 }
@@ -365,8 +365,8 @@ input[type="checkbox"] {
         height: 3rem;
         width: 3rem;
         font-size: 0.875rem;
-        right: 1rem;
-        top: 1rem;
+        right: 1.2rem;
+        top: 1.1rem;
     }
     
     .wrapper ul li a {
@@ -396,8 +396,8 @@ input[type="checkbox"] {
         height: 3rem;
         width: 3rem;
         font-size: 0.75rem;
-        right: 1rem;
-        top: 1rem;
+        right: 1.2rem;
+        top: 1.1rem;
     }
     
     .wrapper ul li a {
@@ -417,7 +417,7 @@ input[type="checkbox"] {
     font-size: 1.5rem; /* Responsive font size */
     line-height: 2.5rem;
     border-radius: 1.5625rem;
-    margin-left: 65px;
+    margin-left: 60px;
 }
 
 @media (max-width: 480px){
@@ -466,6 +466,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     max-width: 1200px;
+    margin-left: 60px;
 }
 
 .flip-card {
@@ -488,7 +489,8 @@ body {
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 25px; /* Consistent border radius */
-    font-size: 0.875rem; /* Adjusted for better readability */
+    font-size: 0.7rem; /* Adjusted for better readability */
+    line-height: 1.8rem;
 }
 
 .flip-card-front, .flip-card-back {
@@ -514,13 +516,12 @@ body {
     background-color: #6643b5;
     color: white;
     transform: rotateY(180deg);
+    
 }
 
 .flip-card-heading {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
+    align-items: center;
     text-align: center;
     z-index: 1;
 }

@@ -144,6 +144,8 @@ body {
 /* End*/
 
 
+
+
 /* Container for social media links, sign-up button, and menu button */
 .header-links {
     display: flex;
@@ -289,28 +291,68 @@ body {
 input[type="checkbox"] {
     display: none;
 }
+
 /* Media query to adjust layout on smaller screens */
 @media (max-width: 768px) {
     .header-links {
+        right: 5px; /* Adjusted positioning for smaller screens */
+        gap: 5px; /* Further reduce space between items */
         flex-wrap: wrap; /* Allow items to wrap on small screens */
-        gap: 5px; /* Reduce space between items */
     }
     
-    .insta, .linkedin, .engineering, .sign-up {
-        font-size: 30px; /* Smaller icons and text on smaller screens */
+    .insta, .linkedin, .engineering {
+        font-size: 25px; /* Smaller icons on smaller screens */
+        height: 25px;
+        width: 25px;
+    }
+    
+    .sign-up {
+        font-size: 12px; /* Smaller text on smaller screens */
+        padding: 4px 10px;
+    }
+    
+    .menu-btn {
+        height: 2rem;
+        width: 2rem;
+        font-size: 0.875rem;
+    }
+    
+    .wrapper ul li a {
+        font-size: 1.25rem; /* Smaller text for menu items */
     }
 }
 
 @media (max-width: 480px) {
     .header-links {
-        flex-wrap: wrap; /* Allow more wrapping on very small screens */
-        gap: 5px; /* Further reduce space between items */
+        right: 0; /* Further adjust positioning */
+        gap: 2px; /* Minimal space between items */
+        flex-wrap: wrap; /* Allow items to wrap on small screens */
     }
     
-    .insta, .linkedin, .engineering, .sign-up {
-        font-size: 5px; /* Further reduce icons and text size */
+    .insta, .linkedin, .engineering {
+        font-size: 20px; /* Further reduce icons for very small screens */
+        height: 20px;
+        width: 20px;
+    }
+    
+    .sign-up {
+        font-size: 10px; /* Further reduce text size */
+        padding: 3px 8px;
+    }
+    
+    .menu-btn {
+        height: 1.75rem;
+        width: 1.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .wrapper ul li a {
+        font-size: 1rem; /* Further reduce text size */
     }
 }
+
+
+
 /* About Section */
 .about {
     padding: 2rem;
@@ -334,69 +376,6 @@ input[type="checkbox"] {
     font-size: 1.125rem; /* Responsive font size */
     line-height: 1.75rem;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .social-media {
-        font-size: 1.5rem; /* Smaller icons for tablets */
-        height: 2rem;
-        width: 2rem;
-    }
-
-    .sign-up {
-        font-size: 0.875rem;
-        padding: 0.5rem 1rem;
-        right: 10rem; /* Adjusted for smaller screens */
-    }
-
-    .menu-btn {
-        height: 2.5rem;
-        width: 2.5rem;
-        font-size: 1rem;
-    }
-
-    .wrapper ul li a {
-        font-size: 1.5rem; /* Smaller text for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .social-media {
-        font-size: 1.25rem; /* Smaller icons for mobile */
-        height: 1.75rem;
-        width: 1.75rem;
-    }
-
-    .sign-up {
-        font-size: 0.75rem;
-        padding: 0.5rem 0.75rem;
-        right: 6rem; /* Adjusted for smaller screens */
-    }
-
-    .menu-btn {
-        height: 2rem;
-        width: 2rem;
-        font-size: 0.875rem;
-    }
-
-    .wrapper ul li a {
-        font-size: 1.25rem; /* Smaller text for mobile */
-    }
-
-    .about {
-        padding: 1rem;
-        margin: 0 1rem;
-    }
-
-    .about h2 {
-        font-size: 1.5rem;
-    }
-
-    .about p {
-        font-size: 1rem;
-    }
-}
-
 
 
 /* Global Styles */

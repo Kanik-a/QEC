@@ -157,7 +157,7 @@ body {
 }
 
 /* Social media icons and sign-up button styling */
-.insta, .linkedin, .engineering {
+.insta, .linkedin, .engineering .sign-up {
     color: #6643b5;
     font-size: 40px; /* Adjust font size for icons */
     height: 40px;
@@ -178,20 +178,7 @@ body {
     width: 35px;
 }
 
-/* Styling for sign-up button */
-.sign-up {
-    background-color: #6643b5;
-    color: white;
-    padding: 7px 20px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 10px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px; /* Space between the button and other icons */
-}
+
 
 /* Overlay Menu */
 .wrapper {

@@ -152,7 +152,7 @@ body {
     align-items: center; /* Center items vertically */
     position: fixed; /* Fixed position to stay at the top */
     top: 10px;
-    right: 60px;
+    right: 10px;
     gap: 15px; /* Space between items */
     z-index: 1000;
 	
@@ -170,6 +170,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: color 0.3s ease;
+    right: 60px;
 }
 
 .insta ion-icon, .linkedin ion-icon {

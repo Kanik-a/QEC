@@ -150,7 +150,7 @@ body {
     align-items: center; /* Center items vertically */
     position: absolute; /* Fixed position to stay at the top */
     top: 20px;
-    right: 90px;
+    right: 100px;
     gap: 15px; /* Space between items */
     justify-content: center;
 	
@@ -293,11 +293,11 @@ input[type="checkbox"] {
 @media (max-width: 768px) {
     .header-links {
         flex-wrap: wrap; /* Allow items to wrap on small screens */
-        gap: 10px; /* Reduce space between items */
+        gap: 5px; /* Reduce space between items */
     }
     
     .insta, .linkedin, .engineering, .sign-up {
-        font-size: 10px; /* Smaller icons and text on smaller screens */
+        font-size: 30px; /* Smaller icons and text on smaller screens */
     }
 }
 
@@ -308,7 +308,7 @@ input[type="checkbox"] {
     }
     
     .insta, .linkedin, .engineering, .sign-up {
-        font-size: 25px; /* Further reduce icons and text size */
+        font-size: 5px; /* Further reduce icons and text size */
     }
 }
 /* About Section */

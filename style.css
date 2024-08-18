@@ -295,7 +295,7 @@ input[type="checkbox"] {
 /* Media query to adjust layout on smaller screens */
 @media (max-width: 768px) {
     .header-links {
-        right: 50px; /* Adjusted positioning for smaller screens */
+        right: 100px; /* Adjusted positioning for smaller screens */
         gap: 5px; /* Further reduce space between items */
         flex-wrap: wrap; /* Allow items to wrap on small screens */
     }
@@ -324,7 +324,7 @@ input[type="checkbox"] {
 
 @media (max-width: 480px) {
     .header-links {
-        right: 50px; /* Further adjust positioning */
+        right: 100px; /* Further adjust positioning */
         gap: 2px; /* Minimal space between items */
         flex-wrap: wrap; /* Allow items to wrap on small screens */
     }

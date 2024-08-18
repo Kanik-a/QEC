@@ -154,7 +154,7 @@ body {
     top: 10px;
     right: 10px;
     gap: 15px; /* Space between items */
-    z-index: 1000; /* Ensure it appears above other content */
+    
 }
 
 /* Social media icons and sign-up button styling */

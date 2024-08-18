@@ -143,6 +143,8 @@ body {
 }
 /* End*/
 
+
+
 /* Container for social media links, sign-up button, and menu button */
 .header-links {
     display: flex;
@@ -188,6 +190,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 10px; /* Space between the button and other icons */
 }
 
 /* Overlay Menu */

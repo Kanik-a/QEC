@@ -37,8 +37,8 @@ body {
 @media (max-width: 768px){
     .logo{
         left: 0.5rem;
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         top: 0.5rem;
 
     }
@@ -48,8 +48,8 @@ body {
     .logo{
         left: 0.2rem;
         top: 0.2rem;
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
 
     }
 }
@@ -91,7 +91,7 @@ body {
         font-size: 3.5rem;
         line-height: 3.5rem; /* Responsive line height */
         text-align: left;
-        margin-left: 10px;
+        margin-left: 7px;
     }
 }
 
@@ -100,7 +100,7 @@ body {
         font-size: 2.8rem;
         line-height: 3rem;
         text-align: left;
-        margin-left: 10px;
+        margin-left: 7px;
     }
 }
 
@@ -419,7 +419,7 @@ input[type="checkbox"] {
     font-size: 1.5rem; /* Responsive font size */
     line-height: 2.5rem;
     border-radius: 1.5625rem;
-    margin-left: 60px;
+    margin-left: 55px;
 }
 
 
@@ -592,8 +592,9 @@ input[type=text], input[type=email], select, textarea {
     color: white;
     font-size: 1.875rem;
     border-radius: 25px;
-    width: 80%; /* Adjusted for better responsiveness */
-    margin: 2rem auto;
+    width: 60%; /* Adjusted for better responsiveness */
+    margin-left: 15rem;
+    margin-top: 3rem;
     text-align: center;
     font-weight: bold;
 }
@@ -661,21 +662,23 @@ input[type=text], input[type=email], select, textarea {
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
-    max-width: 75%;
-    height: 100vh; /* Full viewport height */
+    width: 60%; /* Adjust width to fit well on smaller screens */
+    max-width: 1200px; /* Maximum width for larger screens */
+    height: 100vh; /* Adjust height for better visibility */
+    margin: 40px 230px; /* Center the slideshow container */
     overflow: hidden;
-    margin-left: 150px;    
 }
 
-.mySlides{
+.mySlides {
     display: flex;
 }
-.mySlides img{
+
+.mySlides img {
     width: 100%;
-    height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover container */
     display: block; /* Remove extra space below images */
 }
+
 /* Navigation Buttons for Slideshow */
 .prev, .next {
     cursor: pointer;
@@ -689,6 +692,7 @@ input[type=text], input[type=email], select, textarea {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 1; /* Ensure buttons are on top */
 }
 
 .next {
@@ -696,20 +700,35 @@ input[type=text], input[type=email], select, textarea {
     border-radius: 3px 0 0 3px;
 }
 
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .slideshow-container {
         height: 50vh; /* Adjust height for tablets and smaller screens */
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 480px) {
     .slideshow-container {
         height: 40vh; /* Adjust height for very small screens */
+        margin: 0 auto;
+    }
+
+    .prev, .next {
+        padding: 12px; /* Adjust button size for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
     }
 }
+
 /* Prizes Section Styles */
 .prizes {
     background-color: #6643b5;

@@ -501,13 +501,7 @@ body {
     border-radius: 25px;
 }
 
-.flip-card-front .flip-card-heading{
-    display: flex;
-}
 
-.flip-card-back .flip-card-heading {
-    display: none;
-}
 
 .flip-card-front {
     background-color: white;
@@ -525,7 +519,7 @@ body {
     position: absolute;
     align-items: center;
     text-align: center;
-    z-index: 1;
+    
    
 }
 
@@ -609,21 +603,23 @@ input[type=text], input[type=email], select, textarea {
 
 @media (max-width: 768px){
     .topic{
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 1.5rem; /* Responsive line height */
         text-align: left;
-        margin-left: 10rem;
+        margin-left: 6rem;
         margin-top: 10rem;
+        padding: 0.5rem;
     }
 }
 
 @media (max-width: 480px){
     .topic{
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 1.5rem;
         text-align: left;
-        margin-left: 10rem;
+        margin-left: 6rem;
         margin-top: 10rem;
+        padding: 0.5rem;
     }
 }
 .faq-container {
@@ -688,7 +684,8 @@ input[type=text], input[type=email], select, textarea {
 @media (max-width: 768px){
     .slideshow-container{
         height: 40vh;
-        margin-left: 0rem;
+        margin-left: 3rem;
+        margin-top: 17rem;
     }
     .mySlides img{
         width: 90%;
@@ -698,7 +695,8 @@ input[type=text], input[type=email], select, textarea {
 @media (max-width: 480px){
     .slideshow-container{
         height: 30vh;
-        margin-left: 0rem;
+        margin-left: 3rem;
+        margin-top: 17rem;
     }
     .mySlides img{
         width: 90%;
@@ -706,6 +704,7 @@ input[type=text], input[type=email], select, textarea {
     .prev, .next {
         padding: 12px;
         font-size: 1rem;
+        margin-top: 15rem;
     }
 }
 
@@ -754,7 +753,7 @@ input[type=text], input[type=email], select, textarea {
     background-color: #6643b5;
     color: white;
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 25px;
     text-align: center;
     font-size: medium;

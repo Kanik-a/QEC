@@ -13,6 +13,37 @@
       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+      <script>
+        function generateNonce() {
+            const array = new Uint8Array(16);
+            window.crypto.getRandomValues(array);
+            return btoa(String.fromCharCode(...array)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const nonce = generateNonce();
+            document.getElementById('csp-meta').setAttribute('content', `
+                default-src 'self';
+                script-src 'self' https://unpkg.com 'nonce-${nonce}';
+                style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline';
+                style-src-elem 'self' https://fonts.googleapis.com;
+                font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+                img-src 'self' data: https://www.engsoc.queensu.ca https://www.youtube.com;
+                connect-src 'self';
+                frame-src https://www.youtube.com;
+                object-src 'none';
+                base-uri 'self';
+            `);
+
+            // Apply the nonce to inline scripts
+            document.querySelectorAll('script').forEach(script => {
+                if (script.hasAttribute('data-nonce')) {
+                    script.setAttribute('nonce', nonce);
+                }
+            });
+        });
+    </script>
+
 
      
    </head>

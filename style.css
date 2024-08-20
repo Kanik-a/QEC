@@ -603,23 +603,23 @@ input[type=text], input[type=email], select, textarea {
 
 @media (max-width: 768px){
     .topic{
-        font-size: 1rem;
+        font-size: 1.5rem;
         line-height: 1.5rem; /* Responsive line height */
-        text-align: left;
-        margin-left: 6rem;
+        text-align: center;
+        margin-left: 5rem;
         margin-top: 10rem;
-        padding: 0.5rem;
+        padding: 1rem;
     }
 }
 
 @media (max-width: 480px){
     .topic{
-        font-size: 1rem;
+        font-size: 1.5rem;
         line-height: 1.5rem;
-        text-align: left;
-        margin-left: 6rem;
+        text-align: center;
+        margin-left: 5rem;
         margin-top: 10rem;
-        padding: 0.5rem;
+        padding: 1rem;
     }
 }
 .faq-container {
@@ -670,82 +670,82 @@ input[type=text], input[type=email], select, textarea {
     background-color: #6643b5;
 }
 
-/* Slideshow Styles */
+/* Slideshow container */
 .slideshow-container {
     position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 100vh;
-    margin-top: 5rem;
+    max-width: 70%;
+    margin: 40px 250px;
     overflow: hidden;
-    margin-left: 15rem;
+    height: 100vh; /* Full viewport height */
 }
 
-@media (max-width: 768px){
-    .slideshow-container{
-        height: 40vh;
-        margin-left: 3rem;
-        margin-top: 17rem;
-    }
-    .mySlides img{
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px){
-    .slideshow-container{
-        height: 30vh;
-        margin-left: 3rem;
-        margin-top: 17rem;
-    }
-    .mySlides img{
-        width: 90%;
-    }
-    .prev, .next {
-        padding: 12px;
-        font-size: 1rem;
-        margin-top: 15rem;
-    }
-}
-
+/* Hide all images by default */
 .mySlides {
-    display: flex;
+    display: none;
 }
 
+/* Image styling */
 .mySlides img {
-    width: 60%;
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* Navigation Buttons for Slideshow */
+
+
+/* Navigation buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: auto;
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 2rem;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1000;
+    transform: translateY(-50%);
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 10px;
 }
 
 .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
+    left: 10px;
 }
 
+/* Hover effect for navigation buttons */
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .slideshow-container{
+        margin: auto;
+    }
+    
+
+    .prev, .next {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .slideshow-container{
+        margin: auto;
+    }
+    
+    .prev, .next {
+        font-size: 1rem;
+        padding: 8px;
+    }
 }
 
 /* Prizes Section Styles */

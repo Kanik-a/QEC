@@ -752,6 +752,8 @@ input[type=text], input[type=email], select, textarea {
         padding: 8px;
         margin-top: 15rem;
     }
+
+
 }
 
 /* Prizes Section Styles */
@@ -764,6 +766,29 @@ input[type=text], input[type=email], select, textarea {
     text-align: center;
     font-size: medium;
 }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    /* For tablets and small desktops */
+    .prizes {
+        margin-top: 1.5rem; /* Reduced margin-top for closer proximity */
+    }
+}
+
+@media (max-width: 768px) {
+    /* For mobile devices in landscape mode */
+    .prizes {
+        margin-top: 1rem; /* Further reduced margin-top */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile devices in portrait mode */
+    .prizes {
+        margin-top: 0.5rem; /* Closest proximity to slideshow */
+    }
+}
+
 
 
 

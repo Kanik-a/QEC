@@ -838,6 +838,17 @@ input[type=text], input[type=email], select, textarea {
     margin: 20px auto; /* Centered and adjusted margins */
     color: #6643b5;
 }
+@media (max-width: 768px){
+    .email-box{
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px){
+    .email-box{
+        width: 80%;
+    }
+}
 
 /* Container Styles */
 .grid-container {

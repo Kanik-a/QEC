@@ -836,6 +836,7 @@ input[type=text], input[type=email], select, textarea {
     padding: 10px;
     text-align: center;
     margin: 20px auto; /* Centered and adjusted margins */
+    color: #6643b5;
 }
 
 /* Container Styles */

@@ -193,15 +193,7 @@ body {
     }
 }
 
-/* For screens from 481px to 768px */
-@media (max-width: 768px){
-    .homeHero__title{
-        font-size: 3.5rem;
-        line-height: 3.5rem;
-        text-align: left;
-        margin-left: 5px;
-    }
-}
+
 
 /* For screens from 769px to 853px */
 @media (max-width: 853px){
@@ -212,7 +204,15 @@ body {
         margin-left: 2px;
     }
 }
-
+/* For screens from 481px to 768px */
+@media (max-width: 768px){
+    .homeHero__title{
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        text-align: left;
+        margin-left: 5px;
+    }
+}
 
 .homeHero__title div {
     transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;

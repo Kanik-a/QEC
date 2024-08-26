@@ -153,48 +153,7 @@ body {
 
 
 
-@media (max-width: 480px){
-    .homeHero__title{
-        font-size: 2.8rem;
-        line-height: 3rem;
-        text-align: left;
-        margin-left: 5px;
-    }
-}
-
-
-@media (max-width: 414px){
-    .homeHero__title{
-        font-size: 2.4rem;
-        line-height: 3rem;
-        text-align: left;
-        margin-left: 2px;
-    }
-}
-@media (max-width: 412px){
-    .homeHero__title{
-        font-size: 2.3rem;
-        line-height: 3rem;
-        text-align: left;
-        margin-left: 2px;
-    }
-}
-@media (max-width: 360px){
-    .homeHero__title{
-        font-size: 2.5rem;
-        line-height: 3rem;
-        text-align: left;
-        margin-left: 2px;
-    }
-}
-@media (max-width: 390px){
-    .homeHero__title{
-        font-size: 2.4rem;
-        line-height: 3rem;
-        text-align: left;
-        margin-left: 2px;
-    }
-}
+/* For screens up to 344px */
 @media (max-width: 344px){
     .homeHero__title{
         font-size: 2rem;
@@ -203,30 +162,28 @@ body {
         margin-left: 2px;
     }
 }
-@media (max-width: 853px){
+
+/* For screens from 345px to 390px */
+@media (max-width: 390px){
     .homeHero__title{
-        font-size: 2rem;
+        font-size: 2.4rem;
         line-height: 3rem;
         text-align: left;
         margin-left: 2px;
     }
 }
-@media (max-width: 820px){
+
+/* For screens from 391px to 412px */
+@media (max-width: 412px){
     .homeHero__title{
-        font-size: 3.5rem;
-        line-height: 3.5rem;
+        font-size: 2.3rem;
+        line-height: 3rem;
         text-align: left;
-        margin-left: 5px;
+        margin-left: 2px;
     }
 }
-@media (max-width: 768px){
-    .homeHero__title{
-        font-size: 3.5rem;
-        line-height: 3.5rem; /* Responsive line height */
-        text-align: left;
-        margin-left: 5px;
-    }
-}
+
+/* For screens from 413px to 480px */
 @media (max-width: 480px){
     .homeHero__title{
         font-size: 2.8rem;
@@ -235,17 +192,21 @@ body {
         margin-left: 5px;
     }
 }
-@media (max-width: 375px){
+
+/* For screens from 481px to 768px */
+@media (max-width: 768px){
     .homeHero__title{
-        font-size: 2.1rem;
-        line-height: 3rem;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
         text-align: left;
-        margin-left: 2px;
+        margin-left: 5px;
     }
 }
-@media (max-width: 360px){
+
+/* For screens from 769px to 853px */
+@media (max-width: 853px){
     .homeHero__title{
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 3rem;
         text-align: left;
         margin-left: 2px;

@@ -237,7 +237,15 @@ body {
 }
 @media (max-width: 375px){
     .homeHero__title{
-        font-size: 2.3rem;
+        font-size: 2.1rem;
+        line-height: 3rem;
+        text-align: left;
+        margin-left: 2px;
+    }
+}
+@media (max-width: 360px){
+    .homeHero__title{
+        font-size: 2.5rem;
         line-height: 3rem;
         text-align: left;
         margin-left: 2px;

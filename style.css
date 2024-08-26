@@ -166,7 +166,7 @@ body {
 /* For screens from 345px to 390px */
 @media (max-width: 390px){
     .homeHero__title{
-        font-size: 2.4rem;
+        font-size: 2.1rem;
         line-height: 3rem;
         text-align: left;
         margin-left: 2px;
@@ -176,7 +176,7 @@ body {
 /* For screens from 391px to 412px */
 @media (max-width: 412px){
     .homeHero__title{
-        font-size: 2.3rem;
+        font-size: 2.1rem;
         line-height: 3rem;
         text-align: left;
         margin-left: 2px;

@@ -162,14 +162,7 @@ body {
     }
 }
 
-@media (max-width: 375px){
-    .homeHero__title{
-        font-size: 2.3rem;
-        line-height: 3rem;
-        text-align: left;
-        margin-left: 2px;
-    }
-}
+
 @media (max-width: 414px){
     .homeHero__title{
         font-size: 2.4rem;
@@ -240,6 +233,14 @@ body {
         line-height: 3rem;
         text-align: left;
         margin-left: 5px;
+    }
+}
+@media (max-width: 375px){
+    .homeHero__title{
+        font-size: 2.3rem;
+        line-height: 3rem;
+        text-align: left;
+        margin-left: 2px;
     }
 }
 

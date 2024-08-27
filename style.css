@@ -161,8 +161,13 @@ body {
     }
 }
 
-
-
+@media (max-width: 821px){
+    .homeHero__title {
+        font-size: 3rem; /* Reduce font size for small screens */
+        line-height: 2.8rem; /* Adjust line height to match font size */
+        margin-left: 5px; /* Adjust margin for better alignment */
+    }
+}
 .homeHero__title div {
     transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;
 }

@@ -163,7 +163,7 @@ body {
 
 @media (max-width: 821px){
     .homeHero__title {
-        font-size: 3rem; /* Reduce font size for small screens */
+        font-size: 2.8rem; /* Reduce font size for small screens */
         line-height: 2.8rem; /* Adjust line height to match font size */
         margin-left: 5px; /* Adjust margin for better alignment */
     }

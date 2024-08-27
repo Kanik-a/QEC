@@ -170,41 +170,8 @@ body {
     }
 }
 
-/* For screens from 391px to 412px */
-@media (max-width: 412px){
-    .homeHero__title {
-        font-size: 2.2rem;
-        line-height: 2.7rem;
-        margin-left: 2px;
-    }
-}
 
-/* For screens from 413px to 480px */
-@media (max-width: 480px){
-    .homeHero__title {
-        font-size: 2.6rem;
-        line-height: 3rem;
-        margin-left: 5px;
-    }
-}
 
-/* For screens from 481px to 768px */
-@media (max-width: 768px){
-    .homeHero__title {
-        font-size: 3.2rem;
-        line-height: 3.5rem;
-        margin-left: 5px;
-    }
-}
-
-/* For screens from 769px to 853px */
-@media (max-width: 853px){
-    .homeHero__title {
-        font-size: 4rem;
-        line-height: 4.5rem;
-        margin-left: 5px;
-    }
-}
 
 .homeHero__title div {
     transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;

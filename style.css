@@ -152,21 +152,12 @@ body {
     z-index: 1;
 }
 
-/* For screens up to 344px */
-@media (max-width: 344px){
+/* For screens up to 375px */
+@media (max-width: 375px){
     .homeHero__title {
-        font-size: 1.6rem;
-        line-height: 2rem;
-        margin-left: 2px;
-    }
-}
-
-/* For screens from 345px to 390px */
-@media (max-width: 390px){
-    .homeHero__title {
-        font-size: 1.6rem;
-        line-height: 2.5rem;
-        margin-left: 2px;
+        font-size: 2.4rem; /* Reduce font size for small screens */
+        line-height: 2.8rem; /* Adjust line height to match font size */
+        margin-left: 5px; /* Adjust margin for better alignment */
     }
 }
 

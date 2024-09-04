@@ -994,6 +994,7 @@ input[type=text], input[type=email], select, textarea {
     }
     .team-image{
         max-height: 300px;
+	max-width: 300px;
     }
 }
 
@@ -1003,6 +1004,7 @@ input[type=text], input[type=email], select, textarea {
     }
     .team-image{
         max-height: 100px;
+        max-width: 100px;
     }
 }
 

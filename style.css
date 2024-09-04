@@ -1003,8 +1003,8 @@ input[type=text], input[type=email], select, textarea {
         grid-template-columns: 1fr; /* 1 column on very small screens */
     }
     .team-image{
-        max-height: 100px;
-        max-width: 100px;
+        max-height: 200px;
+        max-width: 200px;
     }
 }
 

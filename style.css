@@ -177,6 +177,8 @@ body {
         margin-left: 5px; /* Adjust margin for better alignment */
     }
 }
+
+
 .homeHero__title div {
     transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;
 }
@@ -954,7 +956,12 @@ input[type=text], input[type=email], select, textarea {
 
 /* Item Styles */
 .grid-item {
-    background-color: #6643b5; /* Background color */
+
+    background-image: linear-gradient(
+        rgba(102, 67, 181, 0.6), /* Starting color with transparency */
+        rgba(102, 67, 181, 0.6)  /* Ending color with transparency */
+      ), url('media/background.png');
+    
     color: white; /* Text color */
     border: 1px solid #ddd; /* Border */
     padding: 20px; /* Padding inside items */
@@ -964,7 +971,20 @@ input[type=text], input[type=email], select, textarea {
     margin-left: 20px;
     margin-right: 20px;
     font-size: small;
+    max-height: 420px;
+    font-weight: bold;
+    
+
 }
+.team-image{
+    width: 80%;
+    height: 65%;
+    border-radius: 10%;
+    padding-top: 20px;
+    z-index: 100;
+    
+}
+
 
 
 /* Responsive styles */
@@ -979,3 +999,4 @@ input[type=text], input[type=email], select, textarea {
         grid-template-columns: 1fr; /* 1 column on very small screens */
     }
 }
+

@@ -999,11 +999,7 @@ input[type=text], input[type=email], select, textarea {
     }
 
 }
-@media (max-width: 541px){
-    .grid-item{
-        max-height: 500px;
-    }
-}
+
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr; /* 1 column on very small screens */

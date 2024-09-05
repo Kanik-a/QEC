@@ -992,16 +992,18 @@ input[type=text], input[type=email], select, textarea {
     .grid-container {
         grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
     }
-    .grid-item{
-        max-height: 490px;
-    }
+    
     .team-image{
         max-height: 300px;
         max-width: 300px;
     }
 
 }
-
+@media (max-width: 541px){
+    .grid-item{
+        max-height: 500px;
+    }
+}
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr; /* 1 column on very small screens */

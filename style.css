@@ -23,6 +23,8 @@ body {
     font-style: normal;
     
 }
+
+
 /* INDEX- LANDING PAGE*/
 /* Logo Styling */
 .logo {
@@ -701,7 +703,7 @@ input[type=text], input[type=email], select, textarea {
         font-size: 1.5rem;
         line-height: 1.5rem; /* Responsive line height */
         text-align: center;
-        margin-left: 5rem;
+        margin-left: 6rem;
         margin-top: 10rem;
         padding: 1rem;
     }
@@ -712,7 +714,7 @@ input[type=text], input[type=email], select, textarea {
         font-size: 1.5rem;
         line-height: 1.5rem;
         text-align: center;
-        margin-left: 5rem;
+        margin-left: 6rem;
         margin-top: 10rem;
         padding: 1rem;
     }
@@ -946,12 +948,56 @@ input[type=text], input[type=email], select, textarea {
     }
 }
 
+.member-section-container{
+    display: flex;
+    flex-direction: column;
+}
+.member-topic {
+    padding: 1rem;
+    background-color: #6643b5;
+    color: white;
+    font-size: 1.875rem;
+    border-radius: 25px;
+    width: 40%; /* Adjusted for better responsiveness */
+    margin-left: 22rem;
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
 /* Container Styles */
 .grid-container {
     display: grid; /* Enable grid layout */
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     grid-gap: 10px; /* Gap between grid items */
     padding: 10px;
+    
+}
+
+/* Center Container Styles */
+.center-container {
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    gap: 40px; /* Space between items */
+    grid-column: 1 / -1; /* Span full width of the grid */
+    padding: 40px;
+}
+
+/* Center Item Styles */
+.center-item {
+    background-image: linear-gradient(
+        rgba(102, 67, 181, 0.6),
+        rgba(102, 67, 181, 0.6)
+    ), url('media/background.png');
+    color: white;
+    border: 1px solid #ddd;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: small;
+    max-height: 420px;
+    font-weight: bold;
+    width: 330px; /* Fixed width */
 }
 
 /* Item Styles */
@@ -964,7 +1010,7 @@ input[type=text], input[type=email], select, textarea {
     
     color: white; /* Text color */
     border: 1px solid #ddd; /* Border */
-    padding: 20px; /* Padding inside items */
+    padding: 40px; /* Padding inside items */
     text-align: center; /* Center text */
     border-radius: 20px;
     margin-top: 40px;
@@ -986,11 +1032,13 @@ input[type=text], input[type=email], select, textarea {
 }
 
 
-
-/* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .grid-container {
         grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+    }
+    .grid-item{
+        max-width: 80%;
+        margin-left: 30px;
     }
     
     .team-image{
@@ -998,16 +1046,75 @@ input[type=text], input[type=email], select, textarea {
         max-width: 300px;
     }
 
+    .member-topic {
+        font-size: 1.5rem;
+        width: 70%; /* Adjust width on smaller screens */
+        margin-left: 10rem;
+    }
+
+    .center-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 49px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 911px){
+    .topic{
+        margin-left: 10rem;
+        margin-top: 10rem;
+        overflow: hidden;
+    }
+    .member-topic{
+        margin-left: 10rem;
+        width: 60%;
+    }
+    .grid-item{
+        width: 100%;
+        max-height: 70rem;
+        margin-left: 0.2rem;
+
+    }
+    .center-container{
+        justify-content: center;
+    }
+}
+@media (min-width: 911px) and (max-width: 1000px){
+    .topic{
+        margin-left: 11rem;
+        margin-top: 10rem;
+    }
+    .member-topic{
+        margin-left: 17rem;
+    }
 }
 
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr; /* 1 column on very small screens */
     }
+    .grid-item{
+        max-width: 80%;
+        margin-left: 37px;
+    }
     .team-image{
         max-height: 250px;
         max-width: 200px;
     }
+    .member-topic {
+        font-size: 1.25rem;
+        width: 80%; /* Full width on very small screens */
+        margin-left: 4rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on very small screens */
+    }
+
+    .center-item {
+        max-width: 100%; /* Full width on very small screens */
+    }
+    
+    
 }
 
 @media (max-width: 821){
@@ -1016,3 +1123,48 @@ input[type=text], input[type=email], select, textarea {
         max-width: 300px;
     }
 }
+
+
+
+@media (min-width:539px) and (max-width:767px){
+    .topic{
+        margin-left: 7rem;
+    }
+    .member-topic{
+        margin-left: 6rem;
+    }
+}
+
+
+/* Media Queries for Screens 1024px and Upwards */
+@media (min-width: 1024px) {
+    .topic{
+        margin-top: 10rem;
+        margin-left: 13rem;
+    }
+    .member-topic {
+        font-size: 2.5rem; /* Further increase font size */
+        width: 70%; /* Adjust width to 70% of the container */
+        max-width: 1200px; /* Max width for larger screens */
+        margin-left: 10rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
+    }
+
+    .center-container {
+        gap: 40px; /* Increase gap between centered items */
+    }
+
+    .center-item {
+        max-width: 400px; /* Increase max width */
+    }
+
+    .grid-item {
+        max-width: 400px; /* Increase max width for grid items */
+    }
+}
+
+
+/* Responsive styles */

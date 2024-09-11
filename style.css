@@ -35,12 +35,12 @@ body {
     width: 140px;
     height: 120px;
 }
-
-@media (max-width: 768px){
+/* media query to fit logo on all screen sizes*/
+@media (max-width: 769px){ 
     .logo{
         left: 0.5rem;
-        width: 8rem;
-        height: 8rem;
+        width: 7rem;
+        height: 7rem;
         top: 0.5rem;
 
     }
@@ -50,18 +50,8 @@ body {
     .logo{
         left: 0.2rem;
         top: 0.2rem;
-        width: 8rem;
-        height: 8rem;
-
-    }
-}
-
-@media (max-width: 375px){
-    .logo{
-        left: 0.1rem ;
-        height: 6rem;
-        top: 0.2rem;
-        width: 6rem;
+        width: 7rem;
+        height: 7rem;
 
     }
 }
@@ -71,47 +61,22 @@ body {
         left: 0.1rem ;
         height: 5rem;
         top: 0.2rem;
-        width: 5rem;
-
-    }
-}
-@media (max-width: 412px){
-    .logo{
-        left: 0.1rem ;
-        height: 8rem;
-        top: 0.2rem;
-        width: 8rem;
-
-    }
-}
-@media (max-width: 390px){
-    .logo{
-        left: 0.1rem ;
-        height: 7rem;
-        top: 0.2rem;
         width: 7rem;
+        height: 7rem;
 
     }
 }
-@media (max-width: 360){
+
+@media (max-width: 391px){
     .logo{
         left: 0.1rem ;
-        height: 3rem;
+        height: 6rem;
         top: 0.2rem;
-        width: 3rem;
+        width: 6rem;
 
     }
 }
-@media (max-width: 344){
-    .logo{
-        left: 0.1rem ;
-        height: 3rem;
-        top: 0.2rem;
-        width: 3rem;
-
-    }
-}
-@media (max-width: 853){
+@media (max-width: 361px){
     .logo{
         left: 0.1rem ;
         height: 5rem;
@@ -120,6 +85,17 @@ body {
 
     }
 }
+
+@media (max-width: 853){
+    .logo{
+        left: 0.1rem ;
+        height: 4rem;
+        top: 0.2rem;
+        width: 4rem;
+
+    }
+}
+/* End of logo media queries */
 
 /* Image/Word Animation and Title*/
 .homeHero {
@@ -149,11 +125,11 @@ body {
     -webkit-text-stroke: 2px #6643b5;
     -webkit-text-fill-color: white;
     width: 100%; /* Full width */
-    margin-left: 10px;
+    
     font-family: 'Arial', sans-serif;
     z-index: 1;
 }
-
+/* media queries for title */
 /* For screens up to 375px */
 @media (max-width: 481px){
     .homeHero__title {
@@ -180,6 +156,15 @@ body {
     }
 }
 
+@media(max-width: 361px){
+    .homeHero__title {
+        font-size: 2.4rem; /* Reduce font size for small screens */
+        line-height: 2.8rem; /* Adjust line height to match font size */
+        margin-left: 3px;/* Adjust margin for better alignment */
+    }
+
+}
+/* End of title media queries*/
 
 .homeHero__title div {
     transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;
@@ -268,9 +253,6 @@ body {
 }
 /* End*/
 
-
-
-
 /* Container for social media links, sign-up button, and menu button */
 .header-links {
     display: flex;
@@ -280,8 +262,6 @@ body {
     right: 100px;
     gap: 15px; /* Space between items */
     justify-content: center;
-	
-    
 }
 
 /* Social media icons and sign-up button styling */
@@ -513,6 +493,18 @@ input[type="checkbox"] {
     line-height: 1.75rem;
 }
 
+/* Media queries for about section*/
+@media ( max-width: 481px){
+    .about{
+        margin-left: 40px;
+    }
+}
+@media (max-width: 391px){
+    .about{
+        margin-left: 35px;
+    }
+}
+
 
 /* Global Styles */
 * {
@@ -635,14 +627,41 @@ body {
 
 /* Footer Styles */
 .footer {
-    padding: 1rem;
+    box-sizing: border-box;
     width: 100%;
     background-color: #6643b5;
     color: white;
     font-size: 1rem;
     text-align: center;
-    margin-top: 2rem;
+    padding: 1em;
 }
+
+/* Email Box Styles */
+.email-box {
+    background-color: white;
+    border-radius: 25px;
+    width: 60%; /* Adjusted for better responsiveness */
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto; /* Centered and adjusted margins */
+    color: #6643b5;
+}
+
+@media (max-width: 768px){
+    .email-box{
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px){
+    .email-box{
+        width: 80%;
+    }
+}
+
+
+
+
 
 /* Contact Us Form Styles */
 input[type=text], input[type=email], select, textarea {
@@ -925,28 +944,7 @@ input[type=text], input[type=email], select, textarea {
     color: #6643b5;
 }
 
-/* Email Box Styles */
-.email-box {
-    background-color: white;
-    border-radius: 25px;
-    width: 60%; /* Adjusted for better responsiveness */
-    padding: 10px;
-    text-align: center;
-    margin: 20px auto; /* Centered and adjusted margins */
-    color: #6643b5;
-}
 
-@media (max-width: 768px){
-    .email-box{
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px){
-    .email-box{
-        width: 80%;
-    }
-}
 
 .member-section-container{
     display: flex;
@@ -1019,6 +1017,7 @@ input[type=text], input[type=email], select, textarea {
     font-size: small;
     max-height: 420px;
     font-weight: bold;
+    width: 330px;
     
 
 }
@@ -1030,6 +1029,7 @@ input[type=text], input[type=email], select, textarea {
     z-index: 100;
     
 }
+
 
 
 @media (max-width: 767px) {
@@ -1077,24 +1077,33 @@ input[type=text], input[type=email], select, textarea {
     .center-container{
         justify-content: center;
     }
+    .team-image{
+        width: 90%;
+        height: 60%;
+    }
+    
+
 }
 @media (min-width: 911px) and (max-width: 1000px){
     .topic{
-        margin-left: 11rem;
+        margin-left: 18rem;
         margin-top: 10rem;
     }
     .member-topic{
-        margin-left: 17rem;
+        margin-left: 23.5rem;
     }
+    
+    
 }
+
 
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: 1fr; /* 1 column on very small screens */
     }
     .grid-item{
-        max-width: 80%;
-        margin-left: 37px;
+        max-width: 100%;
+        margin-left: 40px;
     }
     .team-image{
         max-height: 250px;
@@ -1102,6 +1111,35 @@ input[type=text], input[type=email], select, textarea {
     }
     .member-topic {
         font-size: 1.25rem;
+        width: 80%; /* Full width on very small screens */
+        margin-left: 3rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on very small screens */
+    }
+
+    .center-item {
+        max-width: 100%; /* Full width on very small screens */
+        margin-right: 16px;
+    }
+    
+    
+}
+@media (max-width: 391px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+    .grid-item{
+        max-width: 100%;
+        margin-left: 40px;
+    }
+    .team-image{
+        max-height: 250px;
+        max-width: 200px;
+    }
+    .member-topic {
+        font-size: 1.5rem;
         width: 80%; /* Full width on very small screens */
         margin-left: 4rem;
     }
@@ -1112,6 +1150,10 @@ input[type=text], input[type=email], select, textarea {
 
     .center-item {
         max-width: 100%; /* Full width on very small screens */
+        margin-right: 16px;
+    }
+    .topic{
+        margin-left: 6.3rem;
     }
     
     
@@ -1140,13 +1182,13 @@ input[type=text], input[type=email], select, textarea {
 @media (min-width: 1024px) {
     .topic{
         margin-top: 10rem;
-        margin-left: 13rem;
+        margin-left: 14.5rem;
     }
     .member-topic {
         font-size: 2.5rem; /* Further increase font size */
         width: 70%; /* Adjust width to 70% of the container */
         max-width: 1200px; /* Max width for larger screens */
-        margin-left: 10rem;
+        margin-left: 11rem;
     }
 
     .grid-container {

@@ -1133,7 +1133,7 @@ input[type=text], input[type=email], select, textarea {
 @media (min-width: 911px) and (max-width: 1000px){
     .topic{
         margin-top: 10rem;
-        margin-left: 14.5rem;
+        margin-left: 12rem;
     }
     .team-topic{
         margin-left: 14.5rem;

@@ -728,12 +728,12 @@ input[type=text], input[type=email], select, textarea {
     }
 }
 
-@media (max-width: 480px){
+@media (min-width: 400px) and (max-width: 480px){
     .topic{
         font-size: 1.5rem;
         line-height: 1.5rem;
         text-align: center;
-        margin-left: 6rem;
+        margin-left: 5rem;
         margin-top: 10rem;
         padding: 1rem;
     }
@@ -963,6 +963,20 @@ input[type=text], input[type=email], select, textarea {
     font-weight: bold;
 }
 
+.team-topic {
+    padding: 1.5rem;
+    background-color: #6643b5;
+    color: white;
+    font-size: 2rem;
+    border-radius: 25px;
+    width: 80%; /* Adjusted for better responsiveness */
+    margin-left: 15rem;
+    margin-top: 9rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
 /* Container Styles */
 .grid-container {
     display: grid; /* Enable grid layout */
@@ -1058,7 +1072,7 @@ input[type=text], input[type=email], select, textarea {
     }
 }
 
-@media (min-width: 767px) and (max-width: 911px){
+@media (min-width: 767px) and (max-width: 819px){
     .topic{
         margin-left: 10rem;
         margin-top: 10rem;
@@ -1081,16 +1095,75 @@ input[type=text], input[type=email], select, textarea {
         width: 90%;
         height: 60%;
     }
+    .team-topic{
+        margin-left: 5rem;
+    }
+    
+
+}
+@media (min-width: 819px) and (max-width: 910px){
+    .topic{
+        margin-left: 10rem;
+        margin-top: 10rem;
+        overflow: hidden;
+    }
+    .member-topic{
+        margin-left: 11rem;
+        width: 60%;
+    }
+    .grid-item{
+        width: 100%;
+        max-height: 70rem;
+        margin-left: 0.5rem;
+
+    }
+    .center-container{
+        justify-content: center;
+    }
+    .team-image{
+        width: 90%;
+        height: 60%;
+    }
+    .team-topic{
+        margin-left: 6rem;
+    }
     
 
 }
 @media (min-width: 911px) and (max-width: 1000px){
     .topic{
-        margin-left: 18rem;
         margin-top: 10rem;
+        margin-left: 14.5rem;
     }
-    .member-topic{
-        margin-left: 23.5rem;
+    .team-topic{
+        margin-left: 14.5rem;
+        font-size: 2.5rem;
+    }
+    .member-topic {
+        font-size: 2rem; /* Further increase font size */
+        width: 70%; /* Adjust width to 70% of the container */
+        max-width: 1200px; /* Max width for larger screens */
+        margin-left: 9.7rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* Adjust column size */
+        
+    }
+
+    .center-container {
+        gap: 40px; /* Increase gap between centered items */
+    }
+
+    .center-item {
+        max-width: 400px; /* Increase max width */
+    }
+
+    .grid-item {
+        max-width: 400px; /* Increase max width for grid items */
+    }
+    .team-topic{
+        margin-left: 7rem;
     }
     
     
@@ -1115,13 +1188,12 @@ input[type=text], input[type=email], select, textarea {
         margin-left: 3rem;
     }
 
-    .grid-container {
-        grid-template-columns: 1fr; /* Single column layout on very small screens */
-    }
-
     .center-item {
         max-width: 100%; /* Full width on very small screens */
         margin-right: 16px;
+    }
+    .team-topic{
+        margin-left: 3.3rem;
     }
     
     
@@ -1141,7 +1213,7 @@ input[type=text], input[type=email], select, textarea {
     .member-topic {
         font-size: 1.5rem;
         width: 80%; /* Full width on very small screens */
-        margin-left: 4rem;
+        margin-left: 4.1rem;
     }
 
     .grid-container {
@@ -1152,8 +1224,46 @@ input[type=text], input[type=email], select, textarea {
         max-width: 100%; /* Full width on very small screens */
         margin-right: 16px;
     }
+    .team-topic{
+        margin-left: 4.1rem;
+    }
     .topic{
-        margin-left: 6.3rem;
+        margin-left: 5rem;
+    }
+    
+    
+}
+@media (max-width: 390px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+    .grid-item{
+        max-width: 100%;
+        margin-left: 40px;
+    }
+    .team-image{
+        max-height: 250px;
+        max-width: 200px;
+    }
+    .member-topic {
+        font-size: 1.5rem;
+        width: 80%; /* Full width on very small screens */
+        margin-left: 4.4rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on very small screens */
+    }
+
+    .center-item {
+        max-width: 100%; /* Full width on very small screens */
+        margin-right: 16px;
+    }
+    .team-topic{
+        margin-left: 4.6rem;
+    }
+    .topic{
+        margin-left: 5rem;
     }
     
     
@@ -1177,9 +1287,33 @@ input[type=text], input[type=email], select, textarea {
     }
 }
 
+@media(min-width: 539px) and (max-width: 590px){
+    .team-topic{
+        margin-left: 3.5rem;
+    }
+    .member-topic{
+        margin-left: 5.2rem;
+    }
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
+        margin-left: 3.4rem;
+    }
+
+    .center-container {
+        gap: 40px; /* Increase gap between centered items */
+    }
+
+    .center-item {
+        max-width: 400px; /* Increase max width */
+    }
+
+    .grid-item {
+        max-width: 400px; /* Increase max width for grid items */
+    }
+}
 
 /* Media Queries for Screens 1024px and Upwards */
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
     .topic{
         margin-top: 10rem;
         margin-left: 14.5rem;
@@ -1205,6 +1339,9 @@ input[type=text], input[type=email], select, textarea {
 
     .grid-item {
         max-width: 400px; /* Increase max width for grid items */
+    }
+    .team-topic{
+        margin-left: 7rem;
     }
 }
 

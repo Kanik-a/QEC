@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <!--Heading and Logo-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queen's Engineering Competition</title>
+    <meta http-equiv="Content-Security-Policy" content=""">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+      function generateNonce() {
+        const array = new Uint8Array(16);
+        window.crypto.getRandomValues(array);
+        return btoa(String.fromCharCode(...array))
+          .replace(/\+/g, "-")
+          .replace(/\//g, "_")
+          .replace(/=+$/, "");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const nonce = generateNonce();
+        document.getElementById("csp-meta").setAttribute(
+          "content",
+          `
+                default-src 'self';
+                script-src 'self' https://unpkg.com 'nonce-${nonce}';
+                style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline';
+                style-src-elem 'self' https://fonts.googleapis.com;
+                font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+                img-src 'self' data: https://www.engsoc.queensu.ca https://www.youtube.com;
+                connect-src 'self';
+                frame-src https://www.youtube.com;
+                object-src 'none';
+                base-uri 'self';
+            `
+        );
+
+        // Apply the nonce to inline scripts
+        document.querySelectorAll("script").forEach((script) => {
+          if (script.hasAttribute("data-nonce")) {
+            script.setAttribute("nonce", nonce);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img
+      class="logo"
+      src="media\website_logo.png"
+      alt="Queen's Engineering Competition"
+    />
+
+    <!-- Social Media and Sign Up Links -->
+    <div class="header-links">
+      <a
+        class="sign-up"
+        href="https://forms.office.com/r/SjwUiqwk1L?origin=lprLink"
+        >Sign Up</a
+      >
+
+      <a class="insta" href="https://www.instagram.com/quengcomp/">
+        <ion-icon name="logo-instagram" size="large"></ion-icon>
+      </a>
+      <a
+        class="linkedin"
+        href="https://www.linkedin.com/company/queensengineeringcompetition/mycompany/"
+      >
+        <ion-icon name="logo-linkedin" size="large"></ion-icon>
+      </a>
+      <a class="engineering" href="https://www.engsoc.queensu.ca/">
+        <img
+          src="https://www.engsoc.queensu.ca/wp-content/uploads/2024/01/EngSocLogo_ShortWordmark-1030x615.png"
+          alt="Queen's Engineering Society"
+        />
+      </a>
+      <!-- Add the overlay menu button here -->
+      <label for="active" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+    </div>
+
+    <!-- Overlay Menu -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="./faq.html">FAQ's</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./team.html">Meet Our Team</a></li>
+        <li><a href="./sponsor.html">Meet our sponsors</a></li>
+      </ul>
+    </div>
+
+    <!-- End Overlay Menu -->
+
+    <!--Image/Word animation-->
+    <section class="homeHero">
+      <div class="homeHero--inner">
+        <h2 class="homeHero__title">
+          <div style="position: relative; display: inline-block">
+            Innovation
+          </div>
+          <div style="position: relative; display: inline-block">
+            Professionalism
+          </div>
+          <div style="position: relative; display: inline-block">
+            Excellence
+          </div>
+        </h2>
+      </div>
+    </section>
+
+    <div class="cb-cursor">
+      <div class="cb-cursor-text"></div>
+      <div class="cb-cursor-video">
+        <div>
+          <iframe
+            id="reel-clips"
+            class="cursor-clips"
+            preload=""
+            loop=""
+            muted=""
+            playsinline=""
+            autoplay=""
+            src="https://www.youtube.com/embed/PSpQSQ6TF_c?autoplay=1&mute=1&loop=1&controls=0"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!--End-->
+
+    <!--About Section-->
+    <section id="about" class="about">
+      <h2>Get to know QEC</h2>
+      <p>
+        The Queen's Engineering Competition (QEC) stands as a beacon of
+        innovation and excellence within the Faculty of Engineering and Applied
+        Science. Each year, this esteemed event gathers delegates for a
+        conference-style case competition, offering a platform to tackle
+        real-world engineering challenges. Participants select from a diverse
+        array of eight industry-relevant challenges, showcasing their creativity
+        and problem-solving prowess beyond the confines of traditional academia.
+        QEC not only nurtures technical skills but also cultivates
+        professionalism and leadership among aspiring engineers. Check out our
+        various competitions below!
+      </p>
+    </section>
+    <!--End-->
+
+    <!--Challenge Flip Cards-->
+    <!--Flip Card 1-->
+    <div class="flip-card-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Communication</h3>
+            </div>
+            <img
+              src="media/flipcard1.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              Communication at the QEC transcends technical jargon to bridge the
+              gap between complex engineering concepts and public understanding.
+              Participants are tasked with articulating intricate technical
+              problems in accessible ways, ensuring clarity and relevance for a
+              broad audience. This challenge underscores the critical role of
+              clear and transparent communication in engineering.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 2-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Bioengineering</h3>
+            </div>
+            <img
+              src="media/flipcard2.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              In Bioengineering, participants are expected to explore the
+              intersection of biology, engineering, and technology to develop
+              innovative solutions that address pressing healthcare issues. Your
+              mission is to harness the principles of bioengineering to create a
+              product, process, or system that can improve human health and
+              wellbeing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 3-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Junior Design</h3>
+            </div>
+            <img
+              src="media/flipcard3.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              The Junior Design component of the QEC serves as a pivotal
+              opportunity for aspiring engineers to cultivate their critical
+              thinking, design prowess, and creative expression. Participants
+              embark on a journey to conceptualize and develop solutions to
+              real-world challenges, navigating every phase from ideation to
+              execution with diligence and innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 4-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Programming</h3>
+            </div>
+            <img
+              src="media/flipcard5.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              Programming category stands as a testament to competitors'
+              dedication to developing high-quality software solutions for
+              challenging engineering problems. Participants strive to create
+              industry-standard software that not only addresses the specified
+              engineering issues but also emphasizes efficiency, user-friendly
+              interfaces, and practicality.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 5-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Consulting</h3>
+            </div>
+            <img
+              src="media/flipcard6.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              In the consulting category of the Queen's Engineering Competition
+              (QEC), participants are challenged with real-world engineering
+              problems, requiring them to devise comprehensive theoretical
+              solutions for prospective clients. Drawing on their technical
+              expertise and skills, competitors meticulously analyze the
+              problem's facets, including economic viability, environmental
+              impact, political feasibility, and social implications.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 6-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Debate</h3>
+            </div>
+            <img
+              src="media/flipcard7.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              Competitors engage in rigorous intellectual discourse, tasked with
+              constructing persuasive arguments on assigned resolutions. This
+              challenge demands a broad spectrum of knowledge as participants
+              navigate complex topics within a structured debate format.
+              Arguments must be articulated concisely and supported with sound
+              reasoning and evidence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 7-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Re-Engineering</h3>
+            </div>
+            <img
+              src="media/flipcard4.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              In the re-engineering category of the QEC, competitors are
+              challenged to reimagine and redesign existing engineering
+              processes or products in innovative and sustainable ways.
+              Emphasizing creativity, and environmental impact, participants
+              must showcase their ability to innovate by proposing solutions
+              that improve upon existing designs and address contemporary
+              environmental challenges.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 8-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Senior Design</h3>
+            </div>
+            <img
+              src="media/flipcard8.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              The Senior Design segment of the QEC represents a pinnacle for
+              experienced participants to demonstrate their advanced critical
+              thinking, innovative design capabilities, and creative expression.
+              Seniors engage in a comprehensive process of identifying and
+              tackling real-world challenges, from initial problem-solving to
+              the development of robust solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Flip Card 9-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-card-heading">
+              <h3>Innovation</h3>
+            </div>
+            <img
+              src="media/flipcard9.png"
+              alt="image"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 50px;
+              "
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>The innovation contest is not taking place this year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End-->
+
+    <div class="footer">
+      <p>© 2024 Queen's Engineering Competition</p>
+      <div class="email-box">
+        <p>
+          Any questions? Contact us at:
+          <a href="mailto:qec@engsoc.queensu.ca">qec@engsoc.queensu.ca</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="script.js"></script>
